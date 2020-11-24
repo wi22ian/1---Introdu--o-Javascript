@@ -14,10 +14,18 @@
                     habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
                 }    
             ];
-                console.log(usuarios);
+                
             function mostraNomeEHabilidades(usuarios) {
-
+                for(value of usuarios){
+                    
+                    console.log("O " + value.nome + " possui as habilidades: " + value.habilidades.join(", "));
+                }
+/*                 usuarios.forEach(usuarios => {
+                    console.log("O " + usuarios.nome +
+                    " possui as habilidades: " + usuarios.habilidades.join(", "));
+                }); */
             }
+            mostraNomeEHabilidades(usuarios);
         </script>
     </body>
 </html>
