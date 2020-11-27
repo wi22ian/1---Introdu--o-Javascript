@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Module two exercise three</title>
+    </head>
+    <body>
+        <div class="listagem"></div>
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var listaCriada = document.createElement("ul");
+            var teste = document.querySelector(".listagem");
+            listaCriada.classList.add("topper");
+            teste.appendChild(listaCriada);
+
+            function criandoLi() {
+                nomes.forEach(Element => {
+                    var lista = document.createElement("li");
+                    lista.innerText = Element;
+                    var search = document.querySelector(".topper");
+                    search.appendChild(lista);
+                });
+            }
+            criandoLi();
+        </script>
+    </body>
+</html>

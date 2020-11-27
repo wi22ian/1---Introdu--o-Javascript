@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Module two exercise three</title>
+    </head>
+    <body>
+        <div class="listagem"></div>
+        <input type="text" name="nome">
+        <button onclick="adicionar()"> Adicionar</button>
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var listaCriada = document.createElement("ul");
+            var listagem = document.querySelector(".listagem");
+            listaCriada.classList.add("listaPai");
+            listagem.appendChild(listaCriada);
+
+            function criandoLi() {
+                nomes.forEach(elementoArray => {
+                    var listaDeObjetos = document.createElement("li");
+                    listaDeObjetos.innerText = elementoArray;
+                    var search = document.querySelector(".listaPai");
+                    search.appendChild(listaDeObjetos);
+                });
+            }
+            function adicionar() {
+                var valor = document.getElementsByName('nome')[0].value;
+                nomes.push(valor);
+                listaDeObjetos = document.createElement("li");
+                listaDeObjetos.innerText = valor;
+                document.querySelector(".listaPai").appendChild(listaDeObjetos);
+                return document.getElementsByName('nome')[0].value = "";
+            }
+            criandoLi();
+        </script>
+    </body>
+</html>
