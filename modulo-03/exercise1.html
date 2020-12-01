@@ -1,11 +1,22 @@
 <html>
     <head>
-        <title>Exerciio 1 do modulo final</title>
+        <title>Exercise one module two</title>
     </head>
     <body>
-        <input class="inputIdade"></input>
-        <input type="submit" class="btnEnviar"></input>
-
-        <script src="scriptex1.js"></script>
+        <button>Add</button>
+        <div class="boxs"></div>
+        <script>
+            function adicionaBox() {
+                const varBox = document.querySelector(".boxs");
+                var bloco = document.createElement("div");
+                bloco.style.backgroundColor = "red";
+                bloco.style.width = 100;
+                bloco.style.height = 100;
+                bloco.style.margin = 10;
+                varBox.appendChild(bloco);
+            }
+            var inputElement = document.getElementsByTagName('button')[0];
+            inputElement.addEventListener("click",adicionaBox);
+        </script>
     </body>
 </html>

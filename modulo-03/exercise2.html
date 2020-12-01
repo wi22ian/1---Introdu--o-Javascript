@@ -1,12 +1,36 @@
 <html>
     <head>
-        <title>Exercicio dois do modulo final</title>
+        <title>Exercise two module two</title>
     </head>
     <body>
-        <ul id="listaRepo">
-        </ul>
-        <input type="text" name="user">
-        <button onclick="recebeUsuario()">Adicionar</button>
-        <script src="scriptex2.js"></script>
+        <button>Add</button>
+        <div class="boxs"></div>
+        <script>
+            function adicionaBox() {
+                const varBox = document.querySelector(".boxs");
+                var bloco = document.createElement("div");
+                bloco.style.backgroundColor = "red";
+                bloco.style.width = 100;
+                bloco.style.height = 100;
+                bloco.style.margin = 10;
+                bloco.classList.add("boxChildren");
+                varBox.appendChild(bloco);
+                bloco.addEventListener("mouseover", selectDOM);           
+            }
+            function selectDOM() {
+                    this.style.backgroundColor = getRandomColor();
+                }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for(var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            var inputElement = document.getElementsByTagName('button')[0];
+            inputElement.addEventListener("click",adicionaBox);
+        </script>
     </body>
 </html>
