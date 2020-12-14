@@ -1,2 +1,2 @@
 # RocketSeat-Course
-Efetuado treinamento do curso básico da RockeSeat
+curso básico Javascript da RockeSeat
